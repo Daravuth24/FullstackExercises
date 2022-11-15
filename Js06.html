@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm" action="#" onsubmit="myFunction();return false">
+        Member Number: <input type="text" id="memNum" name="memberNumber"><br>
+        Password: <input type="password" id="memPwd" name="password"><br>
+        Submit: <input type="submit">
+    </form>
+    <script>
+        function myFunction(){
+            
+           var memNum = document.getElementById("memNum");
+           var memPwd = document.getElementById("memPwd");
+
+           var user = document.forms["myForm"]["memberNumber"].value;
+
+           if (user == "" || isNaN(user)){
+            alert("Must enter number!")
+            document.getElementById("memNum").focus();
+            return;
+           }
+        
+           var pwd = document.forms["myForm"]["password"];
+
+           if (pwd == "" || pwd.value.length < 4){
+            alert("Must be atleast 4 characters!")
+            memPwd.focus();
+            return;
+           }
+
+        }
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="firstNum">First Number:</label>
+        <input type = "text" id = "firstNum" name = "firstNum"></input><br>
+        <label for="secondNum">Second Number:</label>
+        <input type = "text" id = "secondNum" name = "secondNum"></input><br>
+        <button type = "button" onclick="sumNum()">Sum:</button>
+        <input type = "text" id = "textRes" name = "result"><br>
+        
+    </form>
+    <script>
+
+        function sumNum() {
+            var firstNum = parseInt(document.getElementById("firstNum").value);
+            var secondNum = parseInt(document.getElementById("secondNum").value);
+            var res = firstNum + secondNum;
+
+            document.getElementById("textRes").value = res;
+        }
+
+    </script>
+</body>
+</html>

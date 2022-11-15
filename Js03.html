@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p>Remove text</p>
+    <p id="beforeRemove"></p>
+    <p id="afterRemove"></p>
+    <script>
+        function removeChar(str, x, y) {
+            document.getElementById("beforeRemove").innerHTML = "Original string:" + str
+            strRemove = str.substr(x, y)
+            document.getElementById("afterRemove").innerHTML = "Modified String:" + strRemove
+        }
+        removeChar("Hello world, my name is daravuth", 0, 5);
+    </script>
+</body>
+</html>
